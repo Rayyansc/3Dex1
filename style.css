@@ -1,16 +1,14 @@
-/* Animated Multi-Color Gradient Background */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 950px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
   margin: 0 auto;
   padding: 40px 20px;
   line-height: 1.6;
   text-align: center;
   color: #ffffff;
-
   background: linear-gradient(135deg, #ff007f, #7000ff, #00d4ff, #00ff88);
   background-size: 300% 300%;
-  animation: vibrantShift 10s ease infinite alternate;
+  animation: vibrantShift 12s ease infinite alternate;
   background-attachment: fixed;
 }
 
@@ -21,121 +19,186 @@ body {
 
 header h1 {
   font-family: Impact, sans-serif;
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   margin: 0;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin-top: 5px;
-  opacity: 0.9;
-}
-
-/* Structura Security Badge */
-.security-badge {
-  margin: 12px auto 0 auto;
-  display: inline-block;
-  padding: 6px 16px;
-  background: rgba(0, 255, 136, 0.15);
-  border: 1px solid #00ff88;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: #00ff88;
+  opacity: 0.95;
   letter-spacing: 0.5px;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
 }
 
-/* Glass Card Styling */
 .glass-card {
   margin-top: 30px;
-  padding: 30px;
-  background: rgba(15, 10, 30, 0.65);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  padding: 35px;
+  background: rgba(12, 8, 25, 0.7);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.about-card {
+  text-align: left;
+}
+
+.about-maker {
+  font-weight: bold;
+  color: #00ff88;
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
 }
 
 .section-title {
   font-size: 1.6rem;
   margin-top: 0;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Vault Grid Layout */
-.vault-grid {
+/* Product Grid & Cards */
+.product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
   margin-top: 20px;
 }
 
-.vault-card {
+.product-card {
   background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(0, 212, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
-  padding: 20px;
+  padding: 18px;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  display: block;
   transition: all 0.3s ease;
 }
 
-.vault-card:hover {
-  border-color: #00ff88;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2);
+.product-card:hover {
+  border-color: #00d4ff;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.25);
+  background: rgba(0, 212, 255, 0.05);
 }
 
-.vault-card h3 {
+.product-card h3 {
   margin-top: 0;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #00d4ff;
 }
 
-.vault-card p {
+.product-card p {
   font-size: 0.85rem;
+  margin-bottom: 0;
   opacity: 0.85;
-  margin-bottom: 15px;
 }
 
-/* Download Action Buttons */
-.btn-download {
-  display: block;
-  text-align: center;
-  padding: 10px;
-  background: rgba(0, 212, 255, 0.25);
-  border: 1px solid #00d4ff;
-  color: #ffffff;
-  text-decoration: none;
+/* Futuristic Buttons & Neon Links */
+.inline-neon-link {
+  color: #00ff88;
   font-weight: bold;
-  font-size: 0.85rem;
-  border-radius: 6px;
+  text-decoration: none;
+  border-bottom: 1px dashed #00ff88;
+  transition: all 0.2s ease;
+}
+
+.inline-neon-link:hover {
+  color: #00d4ff;
+  border-bottom-color: #00d4ff;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+}
+
+.btn-futuristic {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 28px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(112, 0, 255, 0.4));
+  border: 1px solid #00d4ff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.25);
   transition: all 0.3s ease;
 }
 
-.btn-download:hover {
-  background: rgba(0, 212, 255, 0.5);
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
+.btn-futuristic:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.5), rgba(112, 0, 255, 0.6));
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+  transform: translateY(-2px);
 }
 
-/* Session Lock / Logout Button */
-.btn-lock {
-  padding: 12px 24px;
-  background: rgba(255, 0, 85, 0.2);
-  border: 1px solid #ff0055;
-  color: #ffffff;
+/* Forms & Submit Button */
+.form-container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.custom-form label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.custom-form input,
+.custom-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff !important;
+  font-size: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.custom-form input:focus,
+.custom-form textarea:focus {
+  border-color: #00ff88;
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.btn-submit-futuristic {
+  width: 100%;
+  padding: 14px;
   font-weight: bold;
+  font-size: 1rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.3), rgba(0, 212, 255, 0.3));
+  border: 1px solid #00ff88;
   border-radius: 8px;
   cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.25);
   transition: all 0.3s ease;
 }
 
-.btn-lock:hover {
-  background: rgba(255, 0, 85, 0.4);
-  box-shadow: 0 0 15px rgba(255, 0, 85, 0.6);
+.btn-submit-futuristic:hover {
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.5), rgba(0, 212, 255, 0.5));
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
+  transform: translateY(-2px);
 }
