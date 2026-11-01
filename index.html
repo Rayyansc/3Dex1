@@ -2,48 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>3Dex - CAD Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3Dex - Welcome & Portal Sign In</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+  <!-- Header -->
   <header>
     <h1>3Dex</h1>
-    <h3>CAD solutions</h3>
+    <h3 class="subtitle">Custom CAD & Onshape Designs</h3>
   </header>
 
-  <section>
-    <p>
-      3DEX offers high-quality 3D prints that will more or less fit your style. 
-      Whether that is an aeroplane or a money box 3dex has got your back. 
-      As well as that you can suggest 3dex things to make and 3dex might choose your item.
-    </p>
-  </section>
+  <main>
+    
+    <!-- ABOUT SECTION (Custom Text Provided) -->
+    <section class="glass-card" style="text-align: left;">
+      <h2 class="section-title" style="text-align: center;">About 3Dex</h2>
+      <p style="font-weight: bold; color: #00d4ff; margin-bottom: 10px;">Made By RC</p>
+      <p>3DEX is a solo venture driven by a deep passion for Computer-Aided Design and additive manufacturing. Specializing in high-precision, print-ready CAD models, the company turns creative ideas and technical concepts into custom, functional 3D designs.</p>
+      <p style="margin-bottom: 0;">Because every project is handled end-to-end by a single dedicated creator, client interaction is direct, personalized, and meticulously tailored to ensure seamless output on any 3D printer.</p>
+    </section>
 
-  <!-- Navigation container for your button-styled links -->
-  <nav>
-    <a href="https://rayyansc.github.io/Products/">Products</a>
-    <a href="https://rayyansc.github.io/Coming-soon/">coming soon</a>
-    <a href="https://rayyansc.github.io/tc/">T&C's</a>
-    <a href="https://rayyansc.github.io/Coming-soon/">Coming Soon</a>
-    <a href="https://rayyansc.github.io/Coming-soon/">coming soon</a>
-     <a href="https://rayyansc.github.io/signin/">sign in</a>
-  </nav>
+    <!-- 6-PRODUCT PREVIEW CATALOG (Linked to https://rayyansc.github.io/products/) -->
+    <section class="glass-card">
+      <h2 class="section-title">Featured Models Preview</h2>
+      <p style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.85;">Explore a preview of our catalog. Click any item to view the full product line.</p>
 
-  <section>
-    <p>
-      <strong>3DEX is a solo venture driven by a deep passion for Computer-Aided Design and additive manufacturing.</strong> Specializing 
-      in high-precision, print-ready CAD models, the company turns creative ideas and technical concepts into custom, 
-      functional 3D designs. 
-      Because every project is handled end-to-end by a single dedicated creator, client interaction is direct, 
-      personalized, and meticulously tailored to ensure seamless output on any 3D printer.
-    </p>
-  </section>
+      <div class="product-grid">
+        <a href="https://rayyansc.github.io/products/" class="product-card">
+          <h3>01. Gear Assembly</h3>
+          <p>Precision spur gear set for high-torque mechanical setups.</p>
+        </a>
+        <a href="https://rayyansc.github.io/products/" class="product-card">
+          <h3>02. Drone Chassis</h3>
+          <p>Lightweight carbon-reinforced quadcopter frame layout.</p>
+        </a>
+        <a href="https://rayyansc.github.io/products/" class="product-card">
+          <h3>03. Robotic Arm Bracket</h3>
+          <p>Custom structural bracket optimized for servo motor mounts.</p>
+        </a>
+        <a href="https://rayyansc.github.io/products/" class="product-card">
+          <h3>04. Custom Enclosure</h3>
+          <p>Ventilated PCB housing with snap-fit lid alignment.</p>
+        </a>
+        <a href="https://rayyansc.github.io/products/" class="product-card">
+          <h3>05. Mechanical Hinge</h3>
+          <p>Heavy-duty print-in-place interlocking mechanical hinge.</p>
+        </a>
+        <a href="https://rayyansc.github.io/products/" class="product-card">
+          <h3>06. Threaded Adapter</h3>
+          <p>High-tolerance custom pipe thread fluid transition coupling.</p>
+        </a>
+      </div>
 
-  <footer>
-    <p>&copy; 3Dex CAD Solutions</p>
-  </footer>
+      <div style="margin-top: 25px;">
+        <a href="https://rayyansc.github.io/products/" class="btn-long" style="display: inline-block; text-decoration: none; max-width: 300px; background: rgba(0, 212, 255, 0.25); border-color: #00d4ff;">View Full Products Catalog ➔</a>
+      </div>
+    </section>
+
+    <!-- SIGN-IN & REQUEST FORM (Web3Forms + Link to signin page) -->
+    <section class="glass-card form-container">
+      <h2 class="section-title">Sign In / Request Access</h2>
+      <p style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.85;">Submit your details below to request access, or visit our dedicated <a href="https://rayyansc.github.io/signin/" style="color: #00ff88; text-decoration: underline;">Sign In Portal</a>.</p>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="custom-form">
+        <input type="hidden" name="access_key" value="8b77c291-bdef-4300-9c3d-1973dd3b6e83">
+        <input type="hidden" name="subject" value="⚡ New 3Dex Access Request / Sign-In">
+        <input type="hidden" name="from_name" value="3Dex Public Portal">
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email Address</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Project Requirements / Reason for Access</label>
+          <textarea id="message" name="message" rows="4" placeholder="Briefly describe what CAD files or models you need access to..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-long btn-submit">Sign In & Submit Request</button>
+      </form>
+    </section>
+
+    <!-- TERMS & CONDITIONS SECTION (Linked to https://rayyansc.github.io/tc/) -->
+    <section class="glass-card" style="text-align: center; padding: 25px;">
+      <h3 style="margin-top:0;">Terms & Conditions</h3>
+      <p style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 15px;">All CAD files and services provided via 3Dex are subject to our formal terms of use and licensing agreements.</p>
+      <a href="https://rayyansc.github.io/tc/" class="btn-long" style="display: inline-block; text-decoration: none; max-width: 280px; background: rgba(255, 255, 255, 0.15);">Read Terms & Conditions ➔</a>
+    </section>
+
+  </main>
 
 </body>
 </html>
